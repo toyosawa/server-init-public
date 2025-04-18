@@ -2,7 +2,7 @@ networks: { intr: { external: true } }
 volumes: { traefik2_acme_data: { driver: "local" } }
 services:
   traefik:
-    image: traefik:v2.11
+    image: traefik:v3
     restart: always
     ports:
       - 80:80
