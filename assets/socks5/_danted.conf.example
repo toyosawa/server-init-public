@@ -17,3 +17,9 @@ socks pass {
     socksmethod: username
     log: connect
 }
+
+socks pass {
+    from: 219.117.202.185/32 to: 0.0.0.0/0
+    socksmethod: none
+    log: connect
+}
