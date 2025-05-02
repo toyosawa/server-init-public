@@ -4,6 +4,9 @@ services:
   traefik:
     image: traefik:v2.11
     restart: always
+    logging:
+      driver: "json-file"
+      options: { max-size: "100k", max-file: "3" }
     ports:
       - 80:80
       - 443:443
