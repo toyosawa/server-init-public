@@ -1,6 +1,6 @@
 set -eu
 # Usage:
-# BASE_URL="example.com" bash scripts/preset/latest.sh
+# BASE_URL="ap1.example.com" bash scripts/preset/latest.sh
 
 cd $(dirname $0)/../..
 
@@ -14,6 +14,9 @@ bash "scripts/tools/install-anyenv.sh"
 bash "scripts/tools/install-jq.sh"
 bash "scripts/tools/install-yq.sh"
 bash "scripts/tools/set-git-default-user.sh"
+
+# bash "scripts/aws/install-aws-cli.sh"
+# bash "scripts/aws/route53-reset-record.sh"
 
 bash "scripts/docker/install-docker.sh"
 bash "scripts/docker/launch-traefik.sh"
@@ -30,7 +33,7 @@ bash "scripts/python/install-uv.sh"
 # bash "scripts/python/install-uv-python.sh" "3.13"
 
 # bash "scripts/php/install-phpenv.sh"
-bash "scripts/php/install-php.sh" "8.3"
-bash "scripts/php/install-composer.sh"
+# bash "scripts/php/install-php.sh" "8.3"
+# bash "scripts/php/install-composer.sh"
 
 echo "-- completed all --" >&2
