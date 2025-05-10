@@ -1,12 +1,12 @@
 ## How to build and push
 
 ```sh
+cd assets/ap_devcontainer/build/workspace
+
 AWS_REGION=us-east-1 # public ECR region
 PUBLIC_ECR_URI=public.ecr.aws/u8r4e6q1
 IMAGE_PATH=ap_devcontainer/workspace
 IMAGE_URI=${PUBLIC_ECR_URI}/${IMAGE_PATH}
-
-cd assets/ap_devcontainer/build
 
 # build
 docker build -t ${IMAGE_URI} .

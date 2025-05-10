@@ -1,7 +1,7 @@
 services:
   workspace:
     image: public.ecr.aws/u8r4e6q1/ap_devcontainer/workspace
-    # build: assets/ap_devcontainer/build
+    # build: .devcontainer/build/workspace
     privileged: true
     volumes:
       - ../:/home/ubuntu/workspace

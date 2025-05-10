@@ -1,5 +1,5 @@
 {
-  "name": "dev_container",
+  "name": "devcontainer",
   "dockerComposeFile": "docker-compose.yml",
   "service": "workspace",
   "workspaceFolder": "/home/ubuntu/workspace",
