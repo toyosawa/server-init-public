@@ -1,0 +1,30 @@
+{
+  "name": "dev_container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/home/ubuntu/workspace",
+  "postStartCommand": [
+    "bash",
+    ".devcontainer/post-start.sh"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome",
+        "vitest.explorer",
+        "bradlc.vscode-tailwindcss",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ]
+    },
+    "codespaces": {
+      "repositories": {
+        "sharingseed/2020-06-dev-template": {
+          "permissions": {
+            "contents": "write"
+          }
+        }
+      }
+    }
+  }
+}
