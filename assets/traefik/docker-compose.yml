@@ -1,5 +1,5 @@
 networks: { intr: { external: true } }
-volumes: { traefik2_acme_data: { driver: "local" } }
+volumes: { traefik3_acme_data: { driver: "local" } }
 services:
   traefik:
     image: traefik:v3
