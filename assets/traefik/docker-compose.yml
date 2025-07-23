@@ -15,7 +15,7 @@ services:
     networks: [ "intr" ]
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - traefik2_acme_data:/traefik_acme
+      - traefik3_acme_data:/traefik_acme
       - ./conf:/etc/traefik
     environment:
       - BASE_URL
