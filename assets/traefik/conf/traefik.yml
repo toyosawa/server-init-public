@@ -20,8 +20,8 @@ certificatesResolvers:
 # put crt, key files into /etc/traefik/certs/domain.name/...
 # > tls:
 # >  certificates:
-# >    - certFile: /etc/traefik/certs/gss.poc-bbs.jp/2025/crt
-# >      keyFile: /etc/traefik/certs/gss.poc-bbs.jp/2025/key
+# >    - certFile: /etc/traefik/certs/example.com/2025/crt
+# >      keyFile: /etc/traefik/certs/example.com/2025/key
 tls:
   certificates:
     - certFile: /etc/traefik/certs/default/crt
