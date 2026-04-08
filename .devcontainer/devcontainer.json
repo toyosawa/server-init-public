@@ -7,6 +7,10 @@
     "bash",
     ".devcontainer/post-start.sh"
   ],
+  "postAttachCommand": [
+    "bash",
+    ".devcontainer/post-attach.sh"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,15 +20,6 @@
         "ms-python.vscode-pylance",
         "charliermarsh.ruff"
       ]
-    },
-    "codespaces": {
-      "repositories": {
-        "sharingseed/2020-06-dev-template": {
-          "permissions": {
-            "contents": "write"
-          }
-        }
-      }
     }
   }
 }
