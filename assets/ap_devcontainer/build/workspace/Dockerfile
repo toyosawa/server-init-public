@@ -8,8 +8,7 @@ RUN apt update -y && apt-get install -y git sudo wget curl unzip
 RUN echo "ubuntu ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN git clone https://github.com/toyosawa/server-init-public $HOME/server-init-public
-COPY server-init.sh $HOME/server-init.sh
-RUN sudo -u $USER bash $HOME/server-init.sh
+RUN sudo -u $USER bash $HOME/server-init-public/scripts/preset/devcontainer.sh
 
 RUN sudo -u $USER mkdir -p $WORKSPACE_DIR
 WORKDIR $WORKSPACE_DIR
