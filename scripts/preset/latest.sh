@@ -5,7 +5,7 @@ set -eu
 cd $(dirname $0)/../..
 
 bash "scripts/os/add-swap.sh"
-# bash "scripts/os/set-max-user-watches.sh"
+bash "scripts/os/set-max-user-watches.sh"
 [ -z "${IS_DEVCONTAINER:-}" ] && \
 bash "scripts/os/set-base-url.sh"
 bash "scripts/os/set-needrestart.sh"
