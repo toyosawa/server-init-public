@@ -5,7 +5,7 @@ set -eu
 cd $(dirname $0)/../..
 
 bash "scripts/os/add-swap.sh"
-bash "scripts/os/set-max-user-watches.sh"
+# bash "scripts/os/set-max-user-watches.sh"
 [ -z "${IS_DEVCONTAINER:-}" ] && \
 bash "scripts/os/set-base-url.sh"
 bash "scripts/os/set-needrestart.sh"
@@ -32,7 +32,7 @@ bash "scripts/node/install-npm-global.sh" "yarn"
 
 # bash "scripts/python/install-pyenv.sh"
 # bash "scripts/python/install-poetry.sh"
-bash "scripts/python/install-python.sh" "3.13"
+bash "scripts/python/install-python.sh" "3.14"
 bash "scripts/python/install-uv.sh"
 # bash "scripts/python/install-uv-python.sh" "3.13"
 
