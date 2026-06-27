@@ -18,6 +18,7 @@ bash "scripts/tools/install-psql.sh"
 bash "scripts/tools/install-claude.sh"
 bash "scripts/tools/install-shell-search.sh"
 # bash "scripts/tools/install-aws-cli.sh"
+bash "scripts/tools/set-git-default-settings.sh"
 [ -z "${IS_DEVCONTAINER:-}" ] && \
 bash "scripts/tools/set-git-default-user.sh"
 
@@ -26,7 +27,7 @@ bash "scripts/docker/install-docker.sh"
 bash "scripts/docker/launch-traefik.sh"
 
 bash "scripts/node/install-nodenv.sh"
-bash "scripts/node/install-node.sh" "24.14.1"
+bash "scripts/node/install-node.sh" "24.18.0"
 bash "scripts/node/install-npm-global.sh" "corepack"
 bash "scripts/node/install-npm-global.sh" "yarn"
 
