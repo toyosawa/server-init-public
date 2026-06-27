@@ -9,10 +9,10 @@ else
 fi
 
 # Set branch.autoSetupMerge
-if [ "$(git config --global branch.autoSetupMerge 2>/dev/null)" = "simple" ]; then
+if [ "$(git config --global branch.autoSetupMerge 2>/dev/null)" = "false" ]; then
   echo "skip git-config global branch.autoSetupMerge" >&2
 else
-  git config --global branch.autoSetupMerge simple
+  git config --global branch.autoSetupMerge false
 fi
 
 echo "-- completed --" >&2
