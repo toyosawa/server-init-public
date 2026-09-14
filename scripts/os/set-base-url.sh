@@ -2,14 +2,12 @@ set -eu
 echo "-- $(basename $(dirname $0))/$(basename $0) --" >&2
 
 SCRIPT_FILE="/etc/profile.d/set_env_base_url.sh"
-if [ -e "${SCRIPT_FILE}" ]; then
-  echo "skip add ${SCRIPT_FILE}" >&2
-elif [ -n "${BASE_URL:-}" ]; then
+if [ -n "${BASE_URL:-}" ]; then
   sudo tee ${SCRIPT_FILE} <<EOL
-export BASE_URL="${BASE_URL}"
+  export BASE_URL="${BASE_URL}"
 EOL
 else
-  echo "skip configure, not exist ${SCRIPT_FILE} nor assign BASE_URL" >&2
+  echo "skip configure, not assign BASE_URL" >&2
 fi
 
 if [ -e "${SCRIPT_FILE}" ]; then
