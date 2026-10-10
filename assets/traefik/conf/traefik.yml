@@ -1,8 +1,14 @@
 entryPoints:
   http:
-    address: :80
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: https
+          scheme: https
+          permanent: true
   https:
-    address: :443
+    address: ":443"
     http:
       tls:
         certResolver: letsencrypt
@@ -14,7 +20,6 @@ certificatesResolvers:
       storage: /traefik_acme/acme.json
       httpChallenge:
         entryPoint: http
-      tlsChallenge: true
 
 # put tls.certificates settrings into provider/domain.name.yml
 # put crt, key files into /etc/traefik/certs/domain.name/...
