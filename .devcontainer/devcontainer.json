@@ -1,0 +1,25 @@
+{
+  "name": "devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/home/ubuntu/workspace",
+  "postStartCommand": [
+    "bash",
+    ".devcontainer/post-start.sh"
+  ],
+  "postAttachCommand": [
+    "bash",
+    ".devcontainer/post-attach.sh"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome",
+        "vitest.explorer",
+        "bradlc.vscode-tailwindcss",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ]
+    }
+  }
+}

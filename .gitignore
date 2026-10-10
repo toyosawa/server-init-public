@@ -1,3 +1,4 @@
+/dev/template
 /local/*
 .env
 /composer.phar

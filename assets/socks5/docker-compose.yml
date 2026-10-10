@@ -1,0 +1,14 @@
+services:
+  openconnect:
+    image: adegtyarev/dante
+    logging:
+      driver: "json-file"
+      options: { max-size: "1M", max-file: "3" }
+    restart: ${RESTART:-no}
+    ports: [ "${SOCKS5_PORT:-8022}:1080" ]
+    volumes:
+      - ./_danted.conf:/etc/sockd.conf
+    command: sockd-username
+    environment:
+      - SOCKD_USER_NAME=${SOCKS5_USER:-user}
+      - SOCKD_USER_PASSWORD=${SOCKS5_PASSWORD:-password}
